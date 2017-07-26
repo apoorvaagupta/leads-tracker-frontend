@@ -7,6 +7,9 @@
     "rules": {
       "no-unused-expression": [true, "allow-new"],
       "member-access": false,
+      "object-literal-sort-keys": false,
+      "ordered-imports": false,
+      "member-ordering": false,
       "trailing-comma": [false],
       "arrow-parens": false,
       //no semi colon if not required

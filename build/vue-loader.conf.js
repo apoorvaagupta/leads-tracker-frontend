@@ -10,6 +10,7 @@ var cssLoaders = utils.cssLoaders({
 })
 
 cssLoaders.ts = 'ts-loader!tslint-loader'
+cssLoaders.js = 'babel-loader!eslint-loader'
 
 module.exports = {
   loaders: cssLoaders,

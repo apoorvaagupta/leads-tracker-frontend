@@ -32,6 +32,9 @@ module.exports = {
         loader: 'tslint-loader',
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
+        options: {
+          fix: true
+        }
       },
       {
         test: /\.ts$/,
@@ -43,23 +46,24 @@ module.exports = {
         }
       },
       {
-        test: /\.(js)$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
-          formatter: require('eslint-friendly-formatter')
+          formatter: require('eslint-friendly-formatter'),
+          fix: true
         }
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: vueLoaderConfig
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

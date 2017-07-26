@@ -25,7 +25,7 @@
 
   @Component
   export default class Hello extends Vue {
-    msg =  'Welcome to Your Vue.js App'
+    msg = 'Welcome to Your Vue.js App'
   }
 </script>
 
