@@ -28,15 +28,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
-      {
         test: /\.ts$/,
         loader: 'tslint-loader',
         enforce: 'pre',
@@ -49,6 +40,15 @@ module.exports = {
           appendTsSuffixTo: [/\.vue$/],
           transpileOnly: true,
           isolatedModules: true
+        }
+      },
+      {
+        test: /\.(js)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
         }
       },
       {
