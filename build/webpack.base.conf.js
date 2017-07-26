@@ -38,9 +38,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
+        loader: 'tslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
+      },
+      {
+        test: /\.ts$/,
         loader: 'ts-loader',
         options: {
-          appendTsSuffixTo: [/\.vue$/]
+          appendTsSuffixTo: [/\.vue$/],
+          transpileOnly: true,
+          isolatedModules: true
         }
       },
       {

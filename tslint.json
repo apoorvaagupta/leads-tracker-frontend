@@ -1,0 +1,18 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+      //no semi colon if not required
+      "semicolon": [true, "never"],
+      //single quotes
+      "quotemark": [true, "single"],
+      //two space indentation
+      "indent": [true, "spaces", 2],
+      //to lint .vue files
+      "no-consecutive-blank-lines": [false]
+    },
+    "rulesDirectory": []
+}
